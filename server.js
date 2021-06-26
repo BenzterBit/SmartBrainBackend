@@ -95,6 +95,6 @@ app.put('/image',(req,res)=>{
 	}).catch(err=> res.status(400).json('error while updating'))
 
 })
-app.listen(3000, ()=>{
-	console.log("this app runs smooth");
+app.listen(process.env.PORT || 3000, ()=>{
+	console.log(`this app runs smooth ${process.env.PORT}`);
 })
